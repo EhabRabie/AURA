@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -789,7 +789,7 @@ function setLang(l){
   renderMQ();renderReels(curFilter);renderProjects();renderBranch(curBranch);goStep(state.step);calc();
 }
 document.getElementById('langBtn').onclick=()=>setLang(LANG==='ar'?'en':'ar');
-try{setLang(localStorage.getItem('aura-lang')==='ar'?'ar':'en');}catch(e){setLang('en');}
+try{setLang(localStorage.getItem('aura-lang')==='en'?'en':'ar');}catch(e){setLang('ar');}
 </script>
 </body>
 </html>
