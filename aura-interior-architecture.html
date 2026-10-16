@@ -217,6 +217,66 @@ footer .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:
 .lead-box input::placeholder{color:#8b8d98}
 .wa-btn{background:#1faa55!important;color:#fff!important;width:100%;justify-content:center;font-size:.95rem!important}
 .breakdown{background:rgba(201,169,106,.1);border:1px dashed rgba(201,169,106,.4);border-radius:14px;padding:16px;font-size:.84rem;margin-bottom:16px;color:#e8cf9a}
+/* PORTAL */
+.portal{background:var(--card);border:1px solid var(--glass-brd);border-radius:26px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+.portal::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),transparent,var(--gold))}
+.portal-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 28px;border-bottom:1px solid var(--glass-brd);flex-wrap:wrap;background:var(--glass)}
+.client-chip{display:flex;gap:12px;align-items:center}
+.client-chip img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.client-chip b{font-size:.95rem;display:block}
+.client-chip small{color:var(--muted);font-size:.75rem;display:flex;align-items:center;gap:6px}
+.client-chip small i{color:#3ddc84;font-size:.55rem}
+.portal-tabs{display:flex;gap:6px;background:var(--onyx-2);padding:6px;border-radius:100px;border:1px solid var(--glass-brd);flex-wrap:wrap}
+.portal-tabs button{border:0;background:transparent;color:var(--sand-dim);font-family:var(--sans);font-weight:600;font-size:.82rem;padding:11px 22px;border-radius:100px;cursor:pointer;transition:.35s}
+.portal-tabs button.active{background:linear-gradient(135deg,#b78f4a,#e8cf9a);color:#111;box-shadow:0 8px 22px rgba(201,169,106,.35)}
+.portal-body{padding:30px 28px}
+.portal-body.swap{animation:fadeUp .5s ease}
+.p-prog-top{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.p-prog-top h3{font-size:1.6rem}
+.p-prog-top strong{font-family:var(--serif);font-size:2rem;color:var(--gold-2);white-space:nowrap}
+.p-track{height:12px;border-radius:100px;background:var(--slate-2);overflow:hidden}
+[data-theme="light"] .p-track{background:#ddd2b8}
+.p-fill{height:100%;width:0;border-radius:100px;background:linear-gradient(90deg,#8a6b2e,var(--gold),var(--gold-2));transition:width 1.1s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden}
+.p-fill::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);animation:shine 2.2s infinite}
+@keyframes shine{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+.p-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;margin-top:26px}
+.p-sub{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px;display:block}
+html[lang="ar"] .p-sub{letter-spacing:.02em}
+.tl{position:relative;padding-left:30px}
+html[dir="rtl"] .tl{padding-left:0;padding-right:30px}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:var(--glass-brd)}
+html[dir="rtl"] .tl::before{left:auto;right:9px}
+.tl-item{position:relative;padding-bottom:20px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-30px;top:2px;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:.55rem;background:var(--slate-2);border:2px solid var(--glass-brd);color:transparent}
+html[dir="rtl"] .tl-dot{left:auto;right:-30px}
+.tl-item.done .tl-dot{background:#1faa55;border-color:#1faa55;color:#fff}
+.tl-item.active .tl-dot{background:var(--gold);border-color:var(--gold-2);color:#111;box-shadow:0 0 0 5px rgba(201,169,106,.2);animation:pulse 2s infinite}
+.tl-card{background:var(--glass);border:1px solid var(--glass-brd);border-radius:14px;padding:14px 16px;transition:.3s}
+.tl-item.active .tl-card{border-color:var(--gold);background:linear-gradient(180deg,rgba(201,169,106,.16),rgba(201,169,106,.04));box-shadow:0 10px 26px rgba(201,169,106,.15)}
+.tl-card b{font-size:.92rem;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.st{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:100px;font-weight:700;white-space:nowrap}
+html[lang="ar"] .st{letter-spacing:.02em}
+.st.done{background:rgba(31,170,85,.15);color:#3ddc84;border:1px solid rgba(31,170,85,.4)}
+.st.active{background:rgba(201,169,106,.18);color:var(--gold-2);border:1px solid var(--gold)}
+.st.pending{background:transparent;color:var(--muted);border:1px dashed var(--glass-brd)}
+.tl-card p{font-size:.8rem;color:var(--muted);margin-top:4px}
+.ph-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ph{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--glass-brd);background:#111}
+.ph img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.ph:hover img{transform:scale(1.07)}
+.ph span{position:absolute;bottom:8px;left:8px;font-size:.68rem;background:rgba(0,0,0,.65);backdrop-filter:blur(6px);color:#fff;padding:5px 11px;border-radius:100px;border:1px solid rgba(255,255,255,.2)}
+html[dir="rtl"] .ph span{left:auto;right:8px}
+.fin{margin-top:20px;background:var(--onyx-2);border:1px solid var(--glass-brd);border-radius:16px;padding:18px}
+.fin-row{display:flex;justify-content:space-between;gap:10px;font-size:.86rem;padding:9px 0;border-bottom:1px dashed var(--glass-brd)}
+.fin-row:last-of-type{border:0}
+.fin-row.next b{color:var(--gold-2)}
+.fin-bar{height:8px;border-radius:100px;background:var(--slate-2);margin-top:10px;overflow:hidden}
+[data-theme="light"] .fin-bar{background:#ddd2b8}
+.fin-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#1faa55,#3ddc84);border-radius:100px;transition:width 1.1s cubic-bezier(.22,1,.36,1)}
+.btn.wa-final{background:#1faa55!important;color:#fff!important;box-shadow:0 12px 32px rgba(31,170,85,.35)}
+@media(max-width:1020px){.p-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.portal-body{padding:22px 18px}.portal-bar{padding:18px}.ph-grid{grid-template-columns:1fr 1fr}}
 /* REVEAL */
 .rv{opacity:0;transform:translateY(36px);transition:.9s cubic-bezier(.22,1,.36,1)}
 .rv.vis{opacity:1;transform:none}
@@ -264,6 +324,7 @@ html[dir="rtl"] .kicker::before{order:2}
       <a href="#projects" data-i18n="nav_projects">Projects</a>
       <a href="#reels" data-i18n="nav_reels">Video Reels</a>
       <a href="#estimator" data-i18n="nav_est">Estimator</a>
+      <a href="#portal" data-i18n="nav_portal">Client Portal</a>
       <a href="#about" data-i18n="nav_about">About</a>
       <a href="#testimonials" data-i18n="nav_testi">Testimonials</a>
       <a href="#contact" data-i18n="nav_contact">Contact</a>
@@ -278,7 +339,7 @@ html[dir="rtl"] .kicker::before{order:2}
 </header>
 <div class="mobile-menu" id="mmenu">
   <button class="icon-btn" id="mclose" style="position:absolute;top:24px;right:24px"><i class="fa-solid fa-xmark"></i></button>
-  <a href="#projects" data-i18n="m_projects">Projects</a><a href="#reels" data-i18n="m_reels">Video Reels</a><a href="#estimator" data-i18n="m_est">Estimator</a><a href="#about" data-i18n="m_about">About</a><a href="#testimonials" data-i18n="m_testi">Testimonials</a><a href="#contact" data-i18n="m_contact">Contact</a>
+  <a href="#projects" data-i18n="m_projects">Projects</a><a href="#reels" data-i18n="m_reels">Video Reels</a><a href="#estimator" data-i18n="m_est">Estimator</a><a href="#portal" data-i18n="m_portal">Client Portal</a><a href="#about" data-i18n="m_about">About</a><a href="#testimonials" data-i18n="m_testi">Testimonials</a><a href="#contact" data-i18n="m_contact">Contact</a>
   <a href="#estimator" class="btn btn-gold" data-i18n="m_cta">Estimate Your Project</a>
 </div>
 
@@ -428,8 +489,30 @@ html[dir="rtl"] .kicker::before{order:2}
         </div>
         <div class="sum-total"><small data-i18n="sum_range">Estimated Budget Range</small><strong id="sTotal">EGP 3.7M – 4.7M</strong><em id="sNote">Turnkey · VAT & loose furniture guidance included</em></div>
         <button class="btn btn-gold" id="unlockBtn" style="width:100%;justify-content:center" data-i18n="unlock"><i class="fa-solid fa-lock-open"></i> Unlock Detailed Breakdown</button>
+        <button class="btn wa-btn" id="waDirectBtn" style="width:100%;justify-content:center;margin-top:10px" data-i18n="wa_send"><i class="fa-brands fa-whatsapp" style="font-size:1.2rem"></i> Send Detailed Breakdown to WhatsApp</button>
         <p style="font-size:.72rem;color:#8f8672;margin-top:12px;text-align:center" data-i18n="sum_spam"><i class="fa-solid fa-shield-halved"></i> No spam. Your choices are attached automatically to WhatsApp.</p>
       </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAL -->
+<section class="section" id="portal" style="padding-top:20px">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="kicker" data-i18n="portal_k">Client Portal Showcase</span>
+      <h2 data-i18n="portal_h">Track Your Project <span class="gold serif" style="font-style:italic">Without a Single Phone Call</span></h2>
+      <p data-i18n="portal_p">Every AURA client gets a live portal: milestones, site photos and payments — updated weekly. Try the interactive demo below.</p>
+    </div>
+    <div class="portal rv">
+      <div class="portal-bar">
+        <div class="client-chip">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" alt="client">
+          <div><b data-i18n="portal_client">Salma El-Masry</b><small><i class="fa-solid fa-circle"></i> <span data-i18n="demo">Demo Access · Client View</span></small></div>
+        </div>
+        <div class="portal-tabs" id="portalTabs"></div>
+      </div>
+      <div class="portal-body" id="portalBody"></div>
     </div>
   </div>
 </section>
@@ -563,7 +646,7 @@ const BASE={villa:12000,apartment:9500,commercial:11000,cafe:13500};
 const STYLEM={modern:1,classic:1.25,japandi:1.1,neo:1.35};
 const SCOPEM={turnkey:1,design:.18,supervision:.32};
 const NAMES={en:{villa:"Villa",apartment:"Apartment",commercial:"Commercial / Office",cafe:"Café / Restaurant",modern:"Ultra Modern",classic:"Classic Elegance",japandi:"Japandi",neo:"Neo-Classic",turnkey:"Turnkey Execution",design:"Design Only",supervision:"Project Supervision"},ar:{villa:"فيلا",apartment:"شقة",commercial:"تجاري / مكتب",cafe:"كافيه / مطعم",modern:"ألترا مودرن",classic:"كلاسيك أنيق",japandi:"جاباندي",neo:"نيو كلاسيك",turnkey:"تسليم مفتاح",design:"تصميم فقط",supervision:"إشراف على التنفيذ"}};
-let LANG='en',curFilter='all',curBranch=0;
+let LANG='en',curFilter='all',curBranch=0,curPortal=0;
 const T=k=>(NAMES[LANG]&&NAMES[LANG][k])||NAMES.en[k]||k;
 const CATL={villa:{en:"Villa Walkthrough",ar:"جولة فيلا"},reel:{en:"Short Reel",ar:"ريلز قصيرة"},before:{en:"Before & After",ar:"قبل وبعد"},bts:{en:"Behind the Scenes",ar:"كواليس"}};
 const REELS_AR=[{t:"فيلا بالم هيلز — جولة كاملة",s:"فيلا · 620 م² · التجمع"},{t:"الكشف عن البنتهاوس في 30 ثانية",s:"ريلز قصيرة · زايد ديونز"},{t:"من الهيكل إلى الملاذ",s:"قبل وبعد · تايم لابس 4 أشهر"},{t:"يوم الرخام — يوميات الموقع 7",s:"كواليس · الساحل الشمالي"},{t:"جولة سينمائية لفيلا الساحل",s:"فيلا · 840 م² · الساحل"},{t:"كافيه جاباندي — من التصميم للافتتاح",s:"ريلز قصيرة · تشطيب مطعم"},{t:"تحوّل الشقة — نفس الزاوية",s:"قبل وبعد · الزمالك 220 م²"},{t:"صبّة الفجر — تيرازو ونحاس",s:"كواليس · حرفة"}];
@@ -655,11 +738,13 @@ function goStep(n){
   document.getElementById('stepLabel').textContent=LANG==='ar'?`الخطوة ${state.step} من 4 — ${STEPS.ar[state.step]}`:`Step ${state.step} of 4 — ${STEPS.en[state.step]}`;
   document.getElementById('stepPct').textContent=(state.step*25)+"%";
   document.getElementById('prevBtn').style.visibility=state.step===1?"hidden":"visible";
-  document.getElementById('nextBtn').innerHTML=state.step===4?(LANG==='ar'?`افتح التفاصيل الكاملة <i class="fa-solid fa-lock-open"></i>`:`Unlock Detailed Breakdown <i class="fa-solid fa-lock-open"></i>`):(LANG==='ar'?`أكمل <i class="fa-solid fa-arrow-right"></i>`:`Continue <i class="fa-solid fa-arrow-right"></i>`);
+  document.getElementById('nextBtn').classList.toggle('wa-final',state.step===4);
+  document.getElementById('nextBtn').innerHTML=state.step===4?(LANG==='ar'?`<i class="fa-brands fa-whatsapp"></i> إرسال التفاصيل عبر واتساب`:`<i class="fa-brands fa-whatsapp"></i> Send Detailed Breakdown to WhatsApp`):(LANG==='ar'?`أكمل <i class="fa-solid fa-arrow-right"></i>`:`Continue <i class="fa-solid fa-arrow-right"></i>`);
 }
 document.getElementById('nextBtn').onclick=()=>{state.step===4?openLead():goStep(state.step+1);};
 document.getElementById('prevBtn').onclick=()=>goStep(state.step-1);
 document.getElementById('unlockBtn').onclick=openLead;
+document.getElementById('waDirectBtn').onclick=openLead;
 const leadModal=document.getElementById('leadModal');
 function estimateText(){
   const rate=BASE[state.prop]*STYLEM[state.style]*SCOPEM[state.scope],mid=state.area*rate;
@@ -725,6 +810,49 @@ document.getElementById('burger').onclick=()=>mm.classList.add('open');
 document.getElementById('mclose').onclick=()=>mm.classList.remove('open');
 mm.querySelectorAll('a').forEach(a=>a.onclick=()=>mm.classList.remove('open'));
 
+/* ---------- PORTAL ---------- */
+const PTXT={prog:{en:"Overall Progress",ar:"التقدّم العام"},complete:{en:"Complete",ar:"مكتمل"},tl:{en:"Execution Timeline",ar:"الجدول التنفيذي"},ph:{en:"Recent Site Photos",ar:"صور الموقع الأخيرة"},fin:{en:"Financial Summary",ar:"الملخّص المالي"},total:{en:"Total Budget",ar:"إجمالي الميزانية"},paid:{en:"Paid to Date",ar:"المدفوع حتى الآن"},next:{en:"Next Payment Due",ar:"الدفعة القادمة"},due:{en:"Due",ar:"الاستحقاق"}};
+const PX=k=>PTXT[k][LANG];
+const STTXT={done:{en:"Completed",ar:"مكتملة"},active:{en:"In Progress",ar:"جارية الآن"},pending:{en:"Pending",ar:"قادمة"}};
+const PHASES={en:[{t:"Demolition & Masonry",d:"Walls down, new blockwork, plaster & waterproofing"},{t:"Plumbing & Electrical",d:"New piping, wiring, DB upgrade & AC drains"},{t:"Gypsum Board & Flooring",d:"Ceilings, partitions, marble & oak laying"},{t:"Painting & Custom Joinery",d:"Final paint, wardrobes, kitchen & styling"}],ar:[{t:"الهدم والمباني",d:"إزالة الحوائط، مبانٍ جديدة، محارة وعزل"},{t:"السباكة والكهرباء",d:"مواسير وأسلاك جديدة، لوحة كهرباء وصرف تكييف"},{t:"الجبس والأرضيات",d:"أسقف وقواطع، تركيب الرخام والبلوط"},{t:"الدهانات والأخشاب",d:"دهان نهائي، دواليب، مطبخ وفرش"}]};
+const PORTAL=[
+ {tab:{en:"Villa 104 · Palm Hills",ar:"فيلا 104 · بالم هيلز"},pct:65,st:["done","done","active","pending"],
+  photos:[["https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop",{en:"Oct 12, 2026",ar:"12 أكتوبر 2026"}],["https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600&auto=format&fit=crop",{en:"Oct 05, 2026",ar:"5 أكتوبر 2026"}],["https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600&auto=format&fit=crop",{en:"Sep 28, 2026",ar:"28 سبتمبر 2026"}],["https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=600&auto=format&fit=crop",{en:"Sep 20, 2026",ar:"20 سبتمبر 2026"}]],
+  total:4200000,paid:2730000,next:700000,due:{en:"Nov 15, 2026 · Gypsum milestone",ar:"15 نوفمبر 2026 · مرحلة الجبس"}},
+ {tab:{en:"Apartment 12B · Zayed",ar:"شقة 12B · زايد"},pct:32,st:["done","active","pending","pending"],
+  photos:[["https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop",{en:"Oct 11, 2026",ar:"11 أكتوبر 2026"}],["https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=600&auto=format&fit=crop",{en:"Oct 03, 2026",ar:"3 أكتوبر 2026"}],["https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=600&auto=format&fit=crop",{en:"Sep 26, 2026",ar:"26 سبتمبر 2026"}],["https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",{en:"Sep 18, 2026",ar:"18 سبتمبر 2026"}]],
+  total:2100000,paid:672000,next:450000,due:{en:"Nov 02, 2026 · MEP milestone",ar:"2 نوفمبر 2026 · مرحلة الكهروميكانيكا"}}
+];
+function renderPortal(i){
+  curPortal=i;
+  const P=PORTAL[i],PH=PHASES[LANG];
+  document.getElementById('portalTabs').innerHTML=PORTAL.map((p,idx)=>`<button class="${idx===i?'active':''}" data-p="${idx}">${p.tab[LANG]}</button>`).join("");
+  document.querySelectorAll('#portalTabs button').forEach(b=>b.onclick=()=>renderPortal(+b.dataset.p));
+  const body=document.getElementById('portalBody');
+  body.classList.remove('swap');void body.offsetWidth;body.classList.add('swap');
+  body.innerHTML=`
+   <div class="p-prog-top"><div><span class="p-sub">${PX('prog')}</span><h3>${P.tab[LANG]}</h3></div><strong><span class="pcount">0</span>% <small style="font-size:.85rem;color:var(--muted);font-family:var(--sans);font-weight:400">${PX('complete')}</small></strong></div>
+   <div class="p-track"><div class="p-fill" id="pFill"></div></div>
+   <div class="p-grid">
+     <div><span class="p-sub">${PX('tl')}</span><div class="tl">${P.st.map((s,k)=>`
+       <div class="tl-item ${s}"><span class="tl-dot"><i class="fa-solid ${s==='pending'?'fa-clock':'fa-check'}"></i></span>
+       <div class="tl-card"><b>${PH[k].t}<span class="st ${s}">${STTXT[s][LANG]}</span></b><p>${PH[k].d}</p></div></div>`).join("")}</div></div>
+     <div><span class="p-sub">${PX('ph')}</span>
+       <div class="ph-grid">${P.photos.map(ph=>`<div class="ph"><img loading="lazy" src="${ph[0]}" alt="site progress"><span>${ph[1][LANG]}</span></div>`).join("")}</div>
+       <div class="fin"><span class="p-sub" style="margin-bottom:6px">${PX('fin')}</span>
+         <div class="fin-row"><span>${PX('total')}</span><b>${money(P.total)}</b></div>
+         <div class="fin-row"><span>${PX('paid')}</span><b style="color:#3ddc84">${money(P.paid)}</b></div>
+         <div class="fin-row next"><span>${PX('next')}</span><b>${money(P.next)}</b></div>
+         <div style="font-size:.75rem;color:var(--muted)">${PX('due')}: ${P.due[LANG]}</div>
+         <div class="fin-bar"><i id="finFill"></i></div>
+       </div>
+     </div>
+   </div>`;
+  requestAnimationFrame(()=>{requestAnimationFrame(()=>{document.getElementById('pFill').style.width=P.pct+'%';document.getElementById('finFill').style.width=Math.round(P.paid/P.total*100)+'%';});});
+  const el=body.querySelector('.pcount'),n=P.pct,t0=performance.now();
+  (function tick(t){const p=Math.min(1,(t-t0)/1100);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(tick);})(t0);
+}
+
 /* ---------- BILINGUAL (EN/AR) ---------- */
 const I18N_AR={
 brand_sub:"للعمارة الداخلية",
@@ -763,6 +891,10 @@ b_wa:`<i class="fa-brands fa-whatsapp"></i> واتساب الفرع`,b_call:`<i 
 i1:"فيلا تسليم مفتاح",i2:"تصميم شقة",i3:"مكتب / تجاري",i4:"كافيه / مطعم",i5:"أخرى",
 submit:`اطلب معاودة الاتصال <i class="fa-solid fa-arrow-right"></i>`,
 vm_cta:`قدّر مشروعًا مشابهًا <i class="fa-solid fa-arrow-right"></i>`,
+nav_portal:"بوابة العميل",m_portal:"بوابة العميل",
+wa_send:`<i class="fa-brands fa-whatsapp" style="font-size:1.2rem"></i> إرسال التفاصيل عبر واتساب`,
+portal_k:"عرض بوابة العميل",portal_h:`تابع مشروعك <span class="gold serif" style="font-style:italic">دون مكالمة واحدة</span>`,portal_p:"كل عميل لدى AURA يحصل على بوابة مباشرة: المراحل وصور الموقع والمدفوعات — تُحدَّث أسبوعيًا. جرّب العرض التفاعلي بالأسفل.",
+portal_client:"سلمى المصري",demo:"دخول تجريبي · عرض العميل",
 l_k:"خطوة أخيرة",l_h:"افتح التفاصيل الكاملة",l_p:"اترك بياناتك — سنفتح واتساب بتقديرك الكامل مكتوبًا مسبقًا. فقط اضغط إرسال.",
 c1:"التجمع",c2:"الشيخ زايد / أكتوبر",c3:"الساحل الشمالي / إسكندرية",c4:"العاصمة الجديدة",c5:"دبي / الخليج",c6:"أخرى",
 send:`<i class="fa-brands fa-whatsapp" style="font-size:1.2rem"></i> إرسال عبر واتساب واستلام التفاصيل`,
@@ -786,7 +918,7 @@ function setLang(l){
     const k=el.dataset.i18nPh;
     el.placeholder=l==='ar'?(I18N_PH_AR[k]!==undefined?I18N_PH_AR[k]:el.dataset.enPh):el.dataset.enPh;
   });
-  renderMQ();renderReels(curFilter);renderProjects();renderBranch(curBranch);goStep(state.step);calc();
+  renderMQ();renderReels(curFilter);renderProjects();renderBranch(curBranch);renderPortal(curPortal);goStep(state.step);calc();
 }
 document.getElementById('langBtn').onclick=()=>setLang(LANG==='ar'?'en':'ar');
 try{setLang(localStorage.getItem('aura-lang')==='en'?'en':'ar');}catch(e){setLang('ar');}
