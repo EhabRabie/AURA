@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AURA Interior Architecture — Crafting Timeless Luxury Spaces</title>
+<meta name="description" content="Award-winning interior architecture for villas, luxury residences, and commercial spaces. Portfolio, cinematic reels & instant budget estimator." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=El+Messiri:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --onyx:#0a0a0c; --onyx-2:#121316; --slate:#1c1e24; --slate-2:#262932;
+  --gold:#c9a96a; --gold-2:#e8cf9a; --champagne:#f0ddb5;
+  --sand:#ece3d0; --sand-dim:#b8ad94; --muted:#8b8d98;
+  --glass:rgba(255,255,255,.06); --glass-brd:rgba(201,169,106,.22);
+  --card:#141519; --shadow:0 30px 80px rgba(0,0,0,.55);
+  --radius:20px; --nav-h:78px;
+  --serif:'Cormorant Garamond',serif; --sans:'Plus Jakarta Sans',sans-serif;
+}
+[data-theme="light"]{
+  --onyx:#f6f2e9; --onyx-2:#efe8d8; --slate:#ffffff; --slate-2:#f3eee0;
+  --sand:#1a1b1f; --sand-dim:#5b5a55; --muted:#7a776e;
+  --glass:rgba(255,255,255,.7); --glass-brd:rgba(160,128,70,.28);
+  --card:#ffffff; --shadow:0 30px 60px rgba(120,100,60,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--onyx);color:var(--sand);overflow-x:hidden;line-height:1.6;transition:background .5s,color .5s}
+::selection{background:var(--gold);color:#0a0a0c}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.container{width:min(1280px,92%);margin:0 auto}
+.serif{font-family:var(--serif)}
+.gold{color:var(--gold)}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.kicker::before{content:"";width:42px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05}
+.section{padding:110px 0;position:relative}
+.sec-head{max-width:720px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(2.2rem,4.5vw,3.6rem);margin:14px 0 14px}
+.sec-head p{color:var(--sand-dim);font-weight:300;font-size:1.05rem}
+/* NAV */
+header{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);transition:.4s}
+header.scrolled{background:color-mix(in srgb,var(--onyx) 82%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--glass-brd);height:70px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:44px;height:44px;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:1.5rem;color:var(--gold);border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(201,169,106,.25),transparent)}
+.brand b{font-family:var(--serif);font-weight:600;font-size:1.35rem;letter-spacing:.08em}
+.brand small{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.42em;color:var(--sand-dim);font-weight:500}
+.nav-links{display:flex;gap:34px;font-size:.86rem;letter-spacing:.06em;font-weight:500}
+.nav-links a{position:relative;opacity:.85;transition:.3s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:.35s}
+.nav-links a:hover{opacity:1;color:var(--gold-2)} .nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:100px;font-size:.85rem;font-weight:600;letter-spacing:.06em;cursor:pointer;border:1px solid transparent;transition:.35s cubic-bezier(.22,1,.36,1);white-space:nowrap}
+.btn-gold{background:linear-gradient(135deg,#b78f4a,#e8cf9a 55%,#c9a96a);color:#111;box-shadow:0 12px 32px rgba(201,169,106,.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(201,169,106,.5);filter:brightness(1.05)}
+.btn-ghost{border-color:var(--glass-brd);color:var(--sand);background:var(--glass);backdrop-filter:blur(12px)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-2);transform:translateY(-2px)}
+.icon-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--glass-brd);display:grid;place-items:center;background:var(--glass);cursor:pointer;transition:.3s;color:var(--sand)}
+.icon-btn:hover{border-color:var(--gold);color:var(--gold);transform:rotate(15deg)}
+.burger{display:none}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:flex-end;padding:160px 0 70px;position:relative;overflow:hidden;background:#08080a}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.72;transform:scale(1.08);animation:heroZoom 18s ease-in-out infinite alternate}
+@keyframes heroZoom{to{transform:scale(1.18)}}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,10,.55) 0%,rgba(8,8,10,.25) 35%,rgba(10,10,12,.92) 85%,var(--onyx) 100%),linear-gradient(90deg,rgba(10,10,12,.75) 0%,transparent 65%)}
+.hero-content{position:relative;z-index:2;width:min(1280px,92%);margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border-radius:100px;background:rgba(201,169,106,.12);border:1px solid rgba(201,169,106,.35);backdrop-filter:blur(10px);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2)}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:#5dffa0;box-shadow:0 0 12px #5dffa0;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.4}}
+.hero h1{font-size:clamp(3rem,7.5vw,6.2rem);max-width:14ch;margin:22px 0 18px;color:#f6f1e3}
+.hero h1 em{font-style:italic;background:linear-gradient(100deg,#e8cf9a,#c9a96a 60%,#fff1cf);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{max-width:560px;color:#d8cdb4;font-weight:300;font-size:clamp(1rem,1.6vw,1.18rem)}
+.hero-ctas{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:0;margin-top:54px;border-top:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px)}
+.hero-meta div{padding:20px 36px 0 0;margin-right:36px;border-right:1px solid rgba(255,255,255,.12)}
+.hero-meta div:last-child{border:0}
+.hero-meta strong{font-family:var(--serif);font-size:1.8rem;color:#f0ddb5;display:block;line-height:1}
+.hero-meta span{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#cbbf9f}
+.scroll-hint{position:absolute;right:40px;bottom:40px;z-index:2;color:#e8cf9a;font-size:.7rem;letter-spacing:.3em;writing-mode:vertical-rl;display:flex;align-items:center;gap:12px;opacity:.8}
+.scroll-hint::after{content:"";width:1px;height:60px;background:linear-gradient(var(--gold),transparent);animation:drop 1.8s infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* MARQUEE */
+.marquee{border-top:1px solid var(--glass-brd);border-bottom:1px solid var(--glass-brd);padding:18px 0;overflow:hidden;background:var(--onyx-2);white-space:nowrap}
+.marquee-track{display:inline-flex;gap:56px;animation:mq 28s linear infinite;font-family:var(--serif);font-size:1.15rem;letter-spacing:.14em;color:var(--sand-dim)}
+.marquee-track i{color:var(--gold);font-size:.7rem;align-self:center}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* REELS */
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.chip{padding:11px 20px;border-radius:100px;border:1px solid var(--glass-brd);background:var(--glass);font-size:.82rem;font-weight:600;cursor:pointer;transition:.3s;color:var(--sand-dim)}
+.chip.active,.chip:hover{background:linear-gradient(135deg,#b78f4a,#e8cf9a);color:#111;border-color:transparent;transform:translateY(-1px)}
+.reels-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.reel{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:9/14;background:#111;cursor:pointer;border:1px solid rgba(255,255,255,.08);transition:.5s cubic-bezier(.22,1,.36,1)}
+.reel img{width:100%;height:100%;object-fit:cover;transition:.8s}
+.reel:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:var(--shadow)}
+.reel:hover img{transform:scale(1.08)}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.85))}
+.reel-top{position:absolute;top:12px;left:12px;right:12px;z-index:2;display:flex;justify-content:space-between;align-items:center}
+.tag{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border:1px solid rgba(201,169,106,.4);color:var(--gold-2);padding:6px 12px;border-radius:100px}
+.dur{font-size:.7rem;background:rgba(0,0,0,.6);padding:5px 10px;border-radius:8px;color:#fff}
+.play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(10px);color:#fff;font-size:1.2rem;transition:.35s}
+.reel:hover .play{background:var(--gold);color:#111;border-color:var(--gold);transform:translate(-50%,-50%) scale(1.12)}
+.reel-info{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:18px}
+.reel-info h3{font-size:1.25rem;color:#fff} .reel-info p{font-size:.78rem;color:#d8cdb4}
+/* PORTFOLIO */
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pcard{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;background:#111;border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:.5s}
+.pcard img{width:100%;height:100%;object-fit:cover;transition:1s cubic-bezier(.22,1,.36,1)}
+.pcard:hover img{transform:scale(1.1)}
+.pcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.88))}
+.pcard-body{position:absolute;bottom:0;left:0;right:0;padding:24px;z-index:2}
+.pcard-body .loc{display:flex;gap:14px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2);margin-bottom:8px}
+.pcard-body h3{font-size:1.6rem;color:#fff}
+.pcard-body p{font-size:.85rem;color:#d8cdb4}
+.pcard .arrow{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);display:grid;place-items:center;color:#fff;opacity:0;transform:translate(-8px,8px);transition:.4s;z-index:2}
+.pcard:hover .arrow{opacity:1;transform:none;background:var(--gold);color:#111}
+/* BEFORE AFTER */
+.ba-wrap{margin-top:60px;display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:stretch}
+.ba-slider{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:16/11;border:1px solid var(--glass-brd);box-shadow:var(--shadow);user-select:none;touch-action:none}
+.ba-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba-after{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:var(--gold-2);z-index:3}
+.ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#b78f4a,#e8cf9a);display:grid;place-items:center;color:#111;font-size:.9rem;box-shadow:0 10px 30px rgba(0,0,0,.5);white-space:nowrap}
+.ba-label{position:absolute;top:16px;z-index:2;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;padding:8px 14px;border-radius:100px;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);color:#fff;border:1px solid rgba(255,255,255,.2)}
+.ba-label.b{left:16px} .ba-label.a{right:16px;border-color:var(--gold);color:var(--gold-2)}
+.ba-copy{background:var(--card);border:1px solid var(--glass-brd);border-radius:24px;padding:42px}
+.ba-copy h3{font-size:2rem;margin:12px 0}
+.ba-copy ul{list-style:none;margin:22px 0;display:grid;gap:14px}
+.ba-copy li{display:flex;gap:12px;align-items:flex-start;font-size:.93rem;color:var(--sand-dim)}
+.ba-copy li i{color:var(--gold);margin-top:4px}
+/* ESTIMATOR */
+.est{background:linear-gradient(180deg,var(--onyx-2),var(--onyx));border-top:1px solid var(--glass-brd);border-bottom:1px solid var(--glass-brd)}
+.est-shell{display:grid;grid-template-columns:1.35fr .85fr;gap:24px;align-items:start}
+.est-card{background:var(--card);border:1px solid var(--glass-brd);border-radius:26px;padding:38px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.est-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),transparent,var(--gold))}
+.steps-dots{display:flex;gap:8px;margin:18px 0 28px}
+.steps-dots span{height:4px;flex:1;border-radius:100px;background:var(--slate-2);transition:.4s}
+[data-theme="light"] .steps-dots span{background:#ddd2b8}
+.steps-dots span.on{background:linear-gradient(90deg,var(--gold),var(--gold-2))}
+.est-step{display:none;animation:fadeUp .5s ease}
+.est-step.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.opt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.opt-grid.two{grid-template-columns:repeat(3,1fr)}
+.opt{border:1.5px solid var(--glass-brd);border-radius:16px;padding:22px 14px;text-align:center;cursor:pointer;transition:.3s;background:var(--glass)}
+.opt i{font-size:1.6rem;color:var(--gold);display:block;margin-bottom:10px}
+.opt b{display:block;font-size:.9rem} .opt small{color:var(--muted);font-size:.75rem}
+.opt:hover{transform:translateY(-3px);border-color:var(--gold)}
+.opt.sel{border-color:var(--gold);background:linear-gradient(180deg,rgba(201,169,106,.18),rgba(201,169,106,.05));box-shadow:0 12px 30px rgba(201,169,106,.2)}
+input[type=range]{width:100%;appearance:none;-webkit-appearance:none;height:6px;border-radius:100px;background:linear-gradient(90deg,var(--gold) var(--fill,30%),var(--slate-2) var(--fill,30%));outline:none;margin:26px 0 10px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff1cf,var(--gold) 60%,#8a6b2e);border:3px solid #fff;cursor:grab;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.area-big{font-family:var(--serif);font-size:3.4rem;color:var(--gold-2)} .area-big small{font-size:1.1rem;color:var(--muted);font-family:var(--sans)}
+.est-nav{display:flex;justify-content:space-between;margin-top:30px;gap:12px}
+.summary{background:linear-gradient(165deg,#191512,#0f0f12 60%);border:1px solid rgba(201,169,106,.35);border-radius:26px;padding:36px;color:#f0e8d5;position:sticky;top:100px;overflow:hidden}
+[data-theme="light"] .summary{background:linear-gradient(165deg,#1a1a1e,#2a2418);color:#f0e8d5}
+.summary::after{content:"A";position:absolute;right:-10px;bottom:-40px;font-family:var(--serif);font-size:12rem;opacity:.06;line-height:1}
+.summary h4{font-family:var(--serif);font-size:1.4rem;letter-spacing:.04em}
+.sum-row{display:flex;justify-content:space-between;font-size:.86rem;padding:12px 0;border-bottom:1px dashed rgba(201,169,106,.25);color:#d8cdb4}
+.sum-row b{color:#fff}
+.sum-total{margin:18px 0 6px;background:rgba(201,169,106,.12);border:1px solid rgba(201,169,106,.35);border-radius:16px;padding:18px;text-align:center}
+.sum-total small{letter-spacing:.28em;font-size:.65rem;text-transform:uppercase;color:var(--gold-2)}
+.sum-total strong{font-family:var(--serif);font-size:2.2rem;display:block;line-height:1.1}
+.sum-total em{font-style:normal;font-size:.78rem;color:#cbbf9f}
+/* TRUST */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:56px}
+.stat{background:var(--card);border:1px solid var(--glass-brd);border-radius:20px;padding:34px;text-align:center;transition:.4s}
+.stat:hover{transform:translateY(-6px);border-color:var(--gold)}
+.stat strong{font-family:var(--serif);font-size:3rem;color:var(--gold-2);display:block;line-height:1}
+.stat span{font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.press{display:flex;gap:26px;flex-wrap:wrap;align-items:center;justify-content:center;margin:0 0 50px;font-family:var(--serif);font-size:1.35rem;color:var(--sand-dim);font-style:italic}
+.press b{font-style:normal;font-family:var(--sans);font-size:.65rem;letter-spacing:.3em;border:1px solid var(--glass-brd);padding:6px 12px;border-radius:100px;color:var(--gold)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.testi{background:var(--glass);border:1px solid var(--glass-brd);border-radius:20px;padding:30px;backdrop-filter:blur(14px);transition:.4s}
+.testi:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.testi .stars{color:var(--gold);font-size:.8rem;letter-spacing:3px;margin-bottom:14px}
+.testi p{font-family:var(--serif);font-size:1.15rem;font-style:italic;line-height:1.5}
+.testi .who{display:flex;gap:12px;align-items:center;margin-top:20px}
+.testi .who img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.testi .who b{font-size:.9rem;display:block} .testi .who small{color:var(--muted);font-size:.76rem}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.branch-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.branch-tabs button{padding:12px 20px;border-radius:100px;border:1px solid var(--glass-brd);background:var(--glass);cursor:pointer;font-weight:600;font-size:.84rem;color:var(--sand-dim);transition:.3s}
+.branch-tabs button.active{background:linear-gradient(135deg,#b78f4a,#e8cf9a);color:#111;border-color:transparent}
+.branch-card{background:var(--card);border:1px solid var(--glass-brd);border-radius:22px;padding:32px}
+.branch-card h3{font-size:1.7rem;margin-bottom:6px}
+.branch-card p{color:var(--sand-dim);font-size:.92rem}
+.branch-card .row{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--glass-brd);min-height:420px;position:relative;background:#111}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(1) sepia(.18) contrast(1.05)}
+form.lead{display:grid;gap:14px;margin-top:20px}
+form.lead input,form.lead select{width:100%;padding:15px 18px;border-radius:14px;border:1px solid var(--glass-brd);background:var(--onyx-2);color:var(--sand);font-family:var(--sans);font-size:.92rem;outline:none;transition:.3s}
+form.lead input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,169,106,.2)}
+.socials{display:flex;gap:12px;margin-top:22px}
+.socials a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--glass-brd);transition:.3s;background:var(--glass)}
+.socials a:hover{background:var(--gold);color:#111;border-color:var(--gold);transform:translateY(-3px)}
+footer{border-top:1px solid var(--glass-brd);padding:34px 0;color:var(--muted);font-size:.84rem}
+footer .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+/* MODALS */
+.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-bg{position:absolute;inset:0;background:rgba(5,5,7,.82);backdrop-filter:blur(10px)}
+.modal-box{position:relative;width:min(920px,100%);background:#101014;border:1px solid rgba(201,169,106,.4);border-radius:24px;overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.7);animation:pop .45s cubic-bezier(.22,1,.36,1)}
+@keyframes pop{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+.modal-box video{width:100%;aspect-ratio:16/9;background:#000}
+.modal-info{padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.modal-info h3{color:#fff;font-size:1.5rem}
+.x{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.25);color:#fff;cursor:pointer;font-size:1rem;z-index:2;transition:.3s}
+.x:hover{background:var(--gold);color:#111}
+.lead-box{width:min(560px,100%)!important;padding:40px;background:linear-gradient(180deg,#15151a,#0e0e11)!important;color:#f0e8d5}
+.lead-box h3{font-size:2rem;color:#fff} .lead-box p{color:#b8ad94;font-size:.9rem;margin:8px 0 18px}
+.lead-box input,.lead-box select{width:100%;padding:15px 18px;border-radius:14px;border:1px solid rgba(201,169,106,.3);background:rgba(255,255,255,.06);color:#fff;margin-bottom:12px;font-size:.92rem;outline:none}
+.lead-box input::placeholder{color:#8b8d98}
+.wa-btn{background:#1faa55!important;color:#fff!important;width:100%;justify-content:center;font-size:.95rem!important}
+.breakdown{background:rgba(201,169,106,.1);border:1px dashed rgba(201,169,106,.4);border-radius:14px;padding:16px;font-size:.84rem;margin-bottom:16px;color:#e8cf9a}
+/* REVEAL */
+.rv{opacity:0;transform:translateY(36px);transition:.9s cubic-bezier(.22,1,.36,1)}
+.rv.vis{opacity:1;transform:none}
+/* FLOAT WA */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:90;width:60px;height:60px;border-radius:50%;background:#1faa55;color:#fff;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 16px 40px rgba(31,170,85,.5);transition:.3s}
+.wa-float:hover{transform:scale(1.1) rotate(8deg)}
+/* RESPONSIVE */
+@media(max-width:1020px){
+  .reels-grid{grid-template-columns:repeat(2,1fr)} .port-grid,.testi-grid{grid-template-columns:repeat(2,1fr)}
+  .est-shell,.ba-wrap,.contact-grid{grid-template-columns:1fr} .summary{position:static}
+  .nav-links{display:none} .burger{display:grid}
+  .stats{grid-template-columns:1fr 1fr 1fr} .hero-meta{flex-wrap:wrap;gap:10px}
+}
+@media(max-width:640px){
+  .section{padding:70px 0} .reels-grid,.port-grid,.testi-grid,.stats{grid-template-columns:1fr}
+  .opt-grid,.opt-grid.two{grid-template-columns:repeat(2,1fr)}
+  .est-card{padding:24px} .ba-copy{padding:26px} .scroll-hint{display:none}
+  .hero-meta div{padding-right:18px;margin-right:18px}
+  .mobile-menu{position:fixed;inset:0;z-index:150;background:rgba(8,8,10,.97);backdrop-filter:blur(16px);display:none;flex-direction:column;align-items:center;justify-content:center;gap:26px;font-family:var(--serif);font-size:1.8rem}
+  .mobile-menu.open{display:flex}
+}
+.mobile-menu{display:none}
+/* ===== RTL / ARABIC ===== */
+html[lang="ar"] body{font-family:'IBM Plex Sans Arabic','Plus Jakarta Sans',sans-serif}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] .serif,html[lang="ar"] .brand b,html[lang="ar"] .testi p,html[lang="ar"] .marquee-track{font-family:'El Messiri','Cormorant Garamond',serif}
+html[lang="ar"] .kicker,html[lang="ar"] .hero-badge,html[lang="ar"] .hero-meta span,html[lang="ar"] .tag,html[lang="ar"] .ba-label,html[lang="ar"] .stat span,html[lang="ar"] .sum-total small,html[lang="ar"] .brand small,html[lang="ar"] .dur{letter-spacing:.02em!important}
+html[lang="ar"] .nav-links{font-size:.95rem}
+html[dir="rtl"] .fa-arrow-right{transform:scaleX(-1)}
+html[dir="rtl"] #prevBtn .fa-arrow-right{transform:none}
+html[dir="rtl"] .hero-bg::after{background:linear-gradient(180deg,rgba(8,8,10,.55) 0%,rgba(8,8,10,.25) 35%,rgba(10,10,12,.92) 85%,var(--onyx) 100%),linear-gradient(-90deg,rgba(10,10,12,.75) 0%,transparent 65%)}
+html[dir="rtl"] .scroll-hint{right:auto;left:40px}
+html[dir="rtl"] .kicker::before{order:2}
+#langBtn{font-weight:700;font-size:.95rem;min-width:44px}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="container nav">
+    <a href="#top" class="brand">
+      <span class="brand-mark">A</span>
+      <span><b>AURA</b><small data-i18n="brand_sub">INTERIOR ARCHITECTURE</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#projects" data-i18n="nav_projects">Projects</a>
+      <a href="#reels" data-i18n="nav_reels">Video Reels</a>
+      <a href="#estimator" data-i18n="nav_est">Estimator</a>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#testimonials" data-i18n="nav_testi">Testimonials</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="icon-btn" id="langBtn" title="العربية / English">ع</button>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
+      <a href="#estimator" class="btn btn-gold" data-i18n="nav_cta">Estimate Your Project <i class="fa-solid fa-arrow-right"></i></a>
+      <button class="icon-btn burger" id="burger"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mmenu">
+  <button class="icon-btn" id="mclose" style="position:absolute;top:24px;right:24px"><i class="fa-solid fa-xmark"></i></button>
+  <a href="#projects" data-i18n="m_projects">Projects</a><a href="#reels" data-i18n="m_reels">Video Reels</a><a href="#estimator" data-i18n="m_est">Estimator</a><a href="#about" data-i18n="m_about">About</a><a href="#testimonials" data-i18n="m_testi">Testimonials</a><a href="#contact" data-i18n="m_contact">Contact</a>
+  <a href="#estimator" class="btn btn-gold" data-i18n="m_cta">Estimate Your Project</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" alt="Luxury living room"></div>
+  <div class="hero-content">
+    <span class="hero-badge"><span class="dot"></span> <span data-i18n="hero_badge">Cairo · Dubai · North Coast — Booking 2026</span></span>
+    <h1 data-i18n="hero_h1">Crafting <em>Timeless Luxury</em> Spaces.</h1>
+    <p class="sub" data-i18n="hero_sub">Award-winning interior architecture for villas, luxury residences, and commercial spaces. From concept to turnkey handover — one studio, zero compromise.</p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn btn-ghost" data-i18n="hero_cta1"><i class="fa-regular fa-images"></i> Explore Portfolio</a>
+      <a href="#estimator" class="btn btn-gold" data-i18n="hero_cta2"><i class="fa-solid fa-calculator"></i> Calculate Estimated Budget</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>120+</strong><span data-i18n="hero_m1">Completed Projects</span></div>
+      <div><strong>14 yrs</strong><span data-i18n="hero_m2">Design Excellence</span></div>
+      <div><strong>★ 4.9</strong><span data-i18n="hero_m3">Client Rating</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</section>
+
+<div class="marquee"><div class="marquee-track" id="mq"></div></div>
+
+<!-- REELS -->
+<section class="section" id="reels">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="kicker" data-i18n="reels_k">Cinematic Gallery</span>
+      <h2 data-i18n="reels_h">Video Reels & <span class="gold serif" style="font-style:italic">Walkthroughs</span></h2>
+      <p data-i18n="reels_p">Real walkthroughs, site progress and 3D cinematic animations. Tap any reel to preview it in full-screen.</p>
+    </div>
+    <div class="filter-bar rv" id="reelFilters">
+      <button class="chip active" data-f="all" data-i18n="f_all">All Videos</button>
+      <button class="chip" data-f="villa" data-i18n="f_villa">Villa Walkthroughs</button>
+      <button class="chip" data-f="reel" data-i18n="f_reel">Short Reels</button>
+      <button class="chip" data-f="before" data-i18n="f_before">Before & After</button>
+      <button class="chip" data-f="bts" data-i18n="f_bts">Behind the Scenes</button>
+    </div>
+    <div class="reels-grid" id="reelsGrid"></div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section" id="projects" style="padding-top:20px">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="kicker" data-i18n="port_k">Selected Works</span>
+      <h2 data-i18n="port_h">Portfolio of <span class="gold serif" style="font-style:italic">Signature Projects</span></h2>
+      <p data-i18n="port_p">Hover to explore. Every project is delivered turnkey — design, execution, styling and snag-free handover.</p>
+    </div>
+    <div class="port-grid" id="portGrid"></div>
+
+    <div class="ba-wrap">
+      <div class="ba-slider rv" id="baSlider">
+        <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=1400&auto=format&fit=crop" alt="Before">
+        <img class="ba-after" id="baAfter" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1400&auto=format&fit=crop" alt="After">
+        <span class="ba-label b" data-i18n="ba_b">Before</span><span class="ba-label a" data-i18n="ba_a">After · AURA Transformation</span>
+        <div class="ba-handle" id="baHandle"><div class="ba-knob"><i class="fa-solid fa-left-right"></i></div></div>
+      </div>
+      <div class="ba-copy rv">
+        <span class="kicker" data-i18n="ba_k">Before / After</span>
+        <h3 data-i18n="ba_h">Drag to witness the <span class="gold" style="font-style:italic">transformation.</span></h3>
+        <p style="color:var(--sand-dim);font-size:.95rem" data-i18n="ba_p">Palm Hills Villa · Living Hall · 85 m² · Delivered in 112 days. Full re-layout, brushed-brass detailing, book-matched marble and layered cove lighting.</p>
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="ba_li1">Structural re-planning + MEP upgrade without touching the façade</span></li>
+          <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="ba_li2">Italian marble, smoked oak & champagne metal palette</span></li>
+          <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="ba_li3">Smart lighting scenes & acoustic comfort tuning</span></li>
+        </ul>
+        <a href="#estimator" class="btn btn-gold" data-i18n="ba_cta">Get a similar transformation <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATOR -->
+<section class="section est" id="estimator">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="kicker" data-i18n="est_k">Interactive Estimator</span>
+      <h2 data-i18n="est_h">Estimate Your Project in <span class="gold serif" style="font-style:italic">60 Seconds</span></h2>
+      <p data-i18n="est_p">Answer 4 quick steps and unlock an instant budget range. Serious enquiries get a priority site visit within 48 hours.</p>
+    </div>
+    <div class="est-shell">
+      <div class="est-card rv">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <b id="stepLabel" style="font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)">Step 1 of 4 — Property Type</b>
+          <span id="stepPct" style="font-size:.8rem;color:var(--muted)">25%</span>
+        </div>
+        <div class="steps-dots" id="dots"><span class="on"></span><span></span><span></span><span></span></div>
+
+        <div class="est-step active" data-step="1">
+          <div class="opt-grid" id="propGrid">
+            <div class="opt sel" data-v="villa"><i class="fa-solid fa-house-chimney"></i><b data-i18n="pv">Villa</b><small data-i18n="pvs">Standalone / Twin</small></div>
+            <div class="opt" data-v="apartment"><i class="fa-solid fa-building"></i><b data-i18n="av">Apartment</b><small data-i18n="avs">Flat / Penthouse</small></div>
+            <div class="opt" data-v="commercial"><i class="fa-solid fa-briefcase"></i><b data-i18n="cv">Commercial</b><small data-i18n="cvs">Office / Clinic</small></div>
+            <div class="opt" data-v="cafe"><i class="fa-solid fa-mug-saucer"></i><b data-i18n="fv">Café / F&B</b><small data-i18n="fvs">Restaurant / Retail</small></div>
+          </div>
+        </div>
+
+        <div class="est-step" data-step="2">
+          <div style="text-align:center;margin-top:6px"><div class="area-big"><span id="areaVal">350</span> <small data-i18n="unit">sqm</small></div>
+          <p style="color:var(--muted);font-size:.85rem" data-i18n="area_hint">Interactive slider · 100 → 1,000+ sqm</p></div>
+          <input type="range" id="area" min="100" max="1000" step="10" value="350">
+          <div style="display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted)"><span data-i18n="a_min">100 sqm</span><span data-i18n="a_mid">550 sqm</span><span data-i18n="a_max">1,000+ sqm</span></div>
+          <div class="opt-grid" style="grid-template-columns:repeat(3,1fr);margin-top:18px">
+            <div class="opt qroom" data-v="1"><b>2–3</b><small data-i18n="rooms">Rooms</small></div>
+            <div class="opt qroom sel" data-v="2"><b>4–5</b><small data-i18n="rooms">Rooms</small></div>
+            <div class="opt qroom" data-v="3"><b>6+</b><small data-i18n="rooms">Rooms</small></div>
+          </div>
+        </div>
+
+        <div class="est-step" data-step="3">
+          <div class="opt-grid two" id="styleGrid">
+            <div class="opt sel" data-v="modern"><i class="fa-solid fa-gem"></i><b data-i18n="sv_mod">Ultra Modern</b><small data-i18n="sv_mod_s">Clean · Minimal · Smart</small></div>
+            <div class="opt" data-v="classic"><i class="fa-solid fa-crown"></i><b data-i18n="sv_cla">Classic Elegance</b><small data-i18n="sv_cla_s">Timeless · Detailed</small></div>
+            <div class="opt" data-v="japandi"><i class="fa-solid fa-spa"></i><b data-i18n="sv_jap">Japandi</b><small data-i18n="sv_jap_s">Warm · Natural · Calm</small></div>
+            <div class="opt" data-v="neo"><i class="fa-solid fa-landmark"></i><b data-i18n="sv_neo">Neo-Classic</b><small data-i18n="sv_neo_s">Parisian · Luxe</small></div>
+          </div>
+        </div>
+
+        <div class="est-step" data-step="4">
+          <div class="opt-grid two" id="scopeGrid">
+            <div class="opt sel" data-v="turnkey"><i class="fa-solid fa-key"></i><b data-i18n="sc_t">Turnkey Execution</b><small data-i18n="sc_t_s">Design + Build + Style</small></div>
+            <div class="opt" data-v="design"><i class="fa-solid fa-pen-ruler"></i><b data-i18n="sc_d">Design Only</b><small data-i18n="sc_d_s">Drawings + 3D + BOQ</small></div>
+            <div class="opt" data-v="supervision"><i class="fa-solid fa-helmet-safety"></i><b data-i18n="sc_s">Supervision</b><small data-i18n="sc_s_s">Site management</small></div>
+          </div>
+          <p style="margin-top:16px;font-size:.82rem;color:var(--muted)" data-i18n="scope_note"><i class="fa-solid fa-circle-info" style="color:var(--gold)"></i> Turnkey includes materials, labour, joinery, MEP, styling & handover cleaning.</p>
+        </div>
+
+        <div class="est-nav">
+          <button class="btn btn-ghost" id="prevBtn" style="visibility:hidden" data-i18n="back"><i class="fa-solid fa-arrow-left"></i> Back</button>
+          <button class="btn btn-gold" id="nextBtn">Continue <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <aside class="summary rv">
+        <h4 data-i18n="sum_t">Live Estimate</h4>
+        <p style="font-size:.8rem;color:#b8ad94" data-i18n="sum_sub">Updates in real time as you choose</p>
+        <div style="margin-top:14px">
+          <div class="sum-row"><span data-i18n="sum_prop">Property</span><b id="sProp">Villa</b></div>
+          <div class="sum-row"><span data-i18n="sum_area">Area</span><b id="sArea">350 sqm</b></div>
+          <div class="sum-row"><span data-i18n="sum_style">Style</span><b id="sStyle">Ultra Modern</b></div>
+          <div class="sum-row"><span data-i18n="sum_scope">Scope</span><b id="sScope">Turnkey Execution</b></div>
+          <div class="sum-row"><span data-i18n="sum_rate">Rate / sqm</span><b id="sRate">EGP 12,000</b></div>
+        </div>
+        <div class="sum-total"><small data-i18n="sum_range">Estimated Budget Range</small><strong id="sTotal">EGP 3.7M – 4.7M</strong><em id="sNote">Turnkey · VAT & loose furniture guidance included</em></div>
+        <button class="btn btn-gold" id="unlockBtn" style="width:100%;justify-content:center" data-i18n="unlock"><i class="fa-solid fa-lock-open"></i> Unlock Detailed Breakdown</button>
+        <p style="font-size:.72rem;color:#8f8672;margin-top:12px;text-align:center" data-i18n="sum_spam"><i class="fa-solid fa-shield-halved"></i> No spam. Your choices are attached automatically to WhatsApp.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT + TRUST -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="kicker" data-i18n="about_k">The Studio</span>
+      <h2 data-i18n="about_h">An Atelier for <span class="gold serif" style="font-style:italic">Quiet Luxury</span></h2>
+      <p data-i18n="about_p">Founded in Cairo, operating across Egypt & the Gulf. Architects, FF&E curators and site engineers under one roof — obsessed with proportion, light and material honesty.</p>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><strong><span class="count" data-n="120">0</span>+</strong><span data-i18n="st1">Completed Projects</span></div>
+      <div class="stat rv"><strong><span class="count" data-n="1">0</span>M+</strong><span data-i18n="st2">Social Followers</span></div>
+      <div class="stat rv"><strong><span class="count" data-n="15">0</span>+</strong><span data-i18n="st3">Industry Awards</span></div>
+    </div>
+    <div class="press rv"><b>PRESS</b> Architectural Digest <i>◆</i> Vogue Living <i>◆</i> Elle Decoration <i>◆</i> Identity Mag <i>◆</i> Commercial Interior Design</div>
+    <div class="testi-grid" id="testimonials">
+      <div class="testi rv"><div class="stars">★★★★★</div><p data-i18n="t1p">"AURA turned our New Cairo villa into a boutique hotel. The before/after shocked even our architect friends."</p><div class="who"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"><div><b data-i18n="t1n">Salma El-Masry</b><small data-i18n="t1r">Villa Owner · New Cairo</small></div></div></div>
+      <div class="testi rv"><div class="stars">★★★★★</div><p data-i18n="t2p">"Transparent BOQ, weekly video site reports, handed over 6 days early. Worth every pound."</p><div class="who"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"><div><b data-i18n="t2n">Omar Khairy</b><small data-i18n="t2r">Penthouse · Zayed Dunes</small></div></div></div>
+      <div class="testi rv"><div class="stars">★★★★★</div><p data-i18n="t3p">"Our restaurant ROI broke even in 8 months. The design itself became our marketing."</p><div class="who"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop"><div><b data-i18n="t3n">Nadine Fawzy</b><small data-i18n="t3r">F&B Founder · Sahel</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact" style="padding-top:20px">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="kicker" data-i18n="ct_k">Visit / Contact</span>
+      <h2 data-i18n="ct_h">Studios & <span class="gold serif" style="font-style:italic">Private Consultations</span></h2>
+      <p data-i18n="ct_p">Switch branches to see address, hours and direct WhatsApp line. Or send the form — we reply within one business day.</p>
+    </div>
+    <div class="branch-tabs rv" id="branchTabs">
+      <button class="active" data-b="0" data-i18n="tab1">New Cairo</button>
+      <button data-b="1" data-i18n="tab2">Sheikh Zayed</button>
+      <button data-b="2" data-i18n="tab3">North Coast</button>
+    </div>
+    <div class="contact-grid">
+      <div class="branch-card rv">
+        <span class="kicker" id="bKicker">Flagship Studio</span>
+        <h3 id="bName">Cairo — New Cairo Branch</h3>
+        <p id="bAddr"><i class="fa-solid fa-location-dot" style="color:var(--gold)"></i> Sodic Eastown, Road 90, New Cairo — Sun–Thu 10am–8pm</p>
+        <p id="bPhone" style="margin-top:8px"><i class="fa-solid fa-phone" style="color:var(--gold)"></i> +20 100 234 5678</p>
+        <div class="row">
+          <a class="btn btn-gold" id="bWa" data-i18n="b_wa" href="https://wa.me/201002345678?text=Hi%20AURA!%20I%27d%20like%20to%20book%20a%20consultation." target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Studio</a>
+          <a class="btn btn-ghost" href="tel:+201002345678" data-i18n="b_call"><i class="fa-solid fa-phone"></i> Call Now</a>
+        </div>
+        <form class="lead" id="contactForm">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <input required placeholder="Full name" id="cName" data-i18n-ph="ph_name"><input required placeholder="Phone / WhatsApp" id="cPhone" data-i18n-ph="ph_phone">
+          </div>
+          <select id="cInterest"><option data-i18n="i1">Villa Turnkey</option><option data-i18n="i2">Apartment Design</option><option data-i18n="i3">Office / Commercial</option><option data-i18n="i4">Café / Restaurant</option><option data-i18n="i5">Other</option></select>
+          <input placeholder="Tell us about your unit (area, city, timeline)..." id="cMsg" data-i18n-ph="ph_msg">
+          <button class="btn btn-gold" type="submit" style="justify-content:center" data-i18n="submit">Request Callback <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="map rv"><iframe id="bMap" title="Studio map" src="https://www.google.com/maps?q=New%20Cairo%20Egypt&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container">
+  <span data-i18n="f1">© 2026 <b class="serif" style="color:var(--gold)">AURA</b> Interior Architecture · Crafted with proportion & light.</span>
+  <span data-i18n="f2">New Cairo · Sheikh Zayed · North Coast · <a href="#estimator" style="color:var(--gold)">Estimate Your Project →</a></span>
+</div></footer>
+
+<!-- VIDEO MODAL -->
+<div class="modal" id="videoModal">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-box">
+    <button class="x" data-close><i class="fa-solid fa-xmark"></i></button>
+    <video id="modalVideo" controls playsinline poster=""></video>
+    <div class="modal-info"><div><h3 id="mvTitle"></h3><p id="mvSub" style="color:#b8ad94;font-size:.85rem"></p></div><a class="btn btn-gold" href="#estimator" data-close-link data-i18n="vm_cta">Estimate similar <i class="fa-solid fa-arrow-right"></i></a></div>
+  </div>
+</div>
+
+<!-- LEAD MODAL -->
+<div class="modal" id="leadModal">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-box lead-box">
+    <button class="x" data-close><i class="fa-solid fa-xmark"></i></button>
+    <span class="kicker" data-i18n="l_k">Almost there</span>
+    <h3 data-i18n="l_h">Unlock your detailed breakdown</h3>
+    <p data-i18n="l_p">Leave your details — we'll open WhatsApp with your full estimate pre-written. Just press send.</p>
+    <div class="breakdown" id="leadSummary"></div>
+    <input id="lName" placeholder="Full name *" data-i18n-ph="ph_lname">
+    <input id="lPhone" placeholder="Phone / WhatsApp (e.g. 01xxxxxxxxx) *" data-i18n-ph="ph_lphone">
+    <select id="lCity"><option data-i18n="c1">New Cairo</option><option data-i18n="c2">Sheikh Zayed / October</option><option data-i18n="c3">North Coast / Alexandria</option><option data-i18n="c4">New Capital</option><option data-i18n="c5">Dubai / Gulf</option><option data-i18n="c6">Other</option></select>
+    <button class="btn wa-btn" id="sendWa" data-i18n="send"><i class="fa-brands fa-whatsapp" style="font-size:1.2rem"></i> Send via WhatsApp & Get Breakdown</button>
+    <p style="text-align:center;font-size:.72rem;margin-top:12px;color:#8f8672" data-i18n="l_agree">By sending you agree to be contacted about your project. No spam, ever.</p>
+  </div>
+</div>
+
+<a class="wa-float" href="https://wa.me/201002345678?text=Hi%20AURA!%20I%27d%20like%20a%20consultation." target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script>
+/* ---------- DATA ---------- */
+const REELS=[
+ {t:"Palm Hills Villa — Full Walkthrough",s:"Villa · 620 sqm · New Cairo",cat:"villa",dur:"02:45",img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",vid:"https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"},
+ {t:"Penthouse Reveal in 30 Seconds",s:"Short reel · Zayed Dunes",cat:"reel",dur:"00:30",img:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop",vid:"https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"},
+ {t:"From Shell to Sanctuary",s:"Before & After · 4 months timelapse",cat:"before",dur:"01:12",img:"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=800&auto=format&fit=crop",vid:"https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"},
+ {t:"Marble Day — Site Diaries Ep.7",s:"Behind the scenes · North Coast",cat:"bts",dur:"01:48",img:"https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop",vid:"https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"},
+ {t:"Seaside Villa Cinematic Tour",s:"Villa · 840 sqm · Sahel",cat:"villa",dur:"03:20",img:"https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800&auto=format&fit=crop",vid:"https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"},
+ {t:"Japandi Café — Design to Opening",s:"Short reel · F&B fit-out",cat:"reel",dur:"00:45",img:"https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop",vid:"https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"},
+ {t:"Apartment Glow-Up — Same Angle",s:"Before & After · Zamalek 220 sqm",cat:"before",dur:"00:58",img:"https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=800&auto=format&fit=crop",vid:"https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"},
+ {t:"3AM Pour — Terrazzo & Brass",s:"Behind the scenes · Craft",cat:"bts",dur:"01:05",img:"https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800&auto=format&fit=crop",vid:"https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"},
+];
+const PROJECTS=[
+ {t:"The Marble House",c:"Villa · 620 m²",l:"New Cairo",img:"https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=900&auto=format&fit=crop"},
+ {t:"Dunes Penthouse",c:"Apartment · 340 m²",l:"Sheikh Zayed",img:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=900&auto=format&fit=crop"},
+ {t:"Sahel Glass Villa",c:"Villa · 840 m²",l:"North Coast",img:"https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=900&auto=format&fit=crop"},
+ {t:"Atelier Café",c:"F&B · 280 m²",l:"Zamalek",img:"https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=900&auto=format&fit=crop"},
+ {t:"Onyx Office HQ",c:"Commercial · 1,100 m²",l:"New Capital",img:"https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=900&auto=format&fit=crop"},
+ {t:"Serene Courtyard Villa",c:"Villa · 510 m²",l:"Palm Hills",img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=900&auto=format&fit=crop"},
+];
+const BRANCHES=[
+ {k:"Flagship Studio",n:"Cairo — New Cairo Branch",a:"Sodic Eastown, Road 90, New Cairo — Sun–Thu 10am–8pm",p:"+20 100 234 5678",wa:"201002345678",map:"https://www.google.com/maps?q=New%20Cairo%20Egypt&output=embed"},
+ {k:"West Studio",n:"Sheikh Zayed Branch",a:"Arkan Plaza, El Bostan, Sheikh Zayed — Sat–Thu 10am–8pm",p:"+20 101 345 6789",wa:"201013456789",map:"https://www.google.com/maps?q=Sheikh%20Zayed%20City%20Egypt&output=embed"},
+ {k:"Summer Atelier",n:"North Coast Studio",a:"Marassi Marina, Sidi Abdelrahman — Daily 11am–9pm (Jun–Sep)",p:"+20 102 456 7890",wa:"201024567890",map:"https://www.google.com/maps?q=Marassi%20North%20Coast%20Egypt&output=embed"},
+];
+const BASE={villa:12000,apartment:9500,commercial:11000,cafe:13500};
+const STYLEM={modern:1,classic:1.25,japandi:1.1,neo:1.35};
+const SCOPEM={turnkey:1,design:.18,supervision:.32};
+const NAMES={en:{villa:"Villa",apartment:"Apartment",commercial:"Commercial / Office",cafe:"Café / Restaurant",modern:"Ultra Modern",classic:"Classic Elegance",japandi:"Japandi",neo:"Neo-Classic",turnkey:"Turnkey Execution",design:"Design Only",supervision:"Project Supervision"},ar:{villa:"فيلا",apartment:"شقة",commercial:"تجاري / مكتب",cafe:"كافيه / مطعم",modern:"ألترا مودرن",classic:"كلاسيك أنيق",japandi:"جاباندي",neo:"نيو كلاسيك",turnkey:"تسليم مفتاح",design:"تصميم فقط",supervision:"إشراف على التنفيذ"}};
+let LANG='en',curFilter='all',curBranch=0;
+const T=k=>(NAMES[LANG]&&NAMES[LANG][k])||NAMES.en[k]||k;
+const CATL={villa:{en:"Villa Walkthrough",ar:"جولة فيلا"},reel:{en:"Short Reel",ar:"ريلز قصيرة"},before:{en:"Before & After",ar:"قبل وبعد"},bts:{en:"Behind the Scenes",ar:"كواليس"}};
+const REELS_AR=[{t:"فيلا بالم هيلز — جولة كاملة",s:"فيلا · 620 م² · التجمع"},{t:"الكشف عن البنتهاوس في 30 ثانية",s:"ريلز قصيرة · زايد ديونز"},{t:"من الهيكل إلى الملاذ",s:"قبل وبعد · تايم لابس 4 أشهر"},{t:"يوم الرخام — يوميات الموقع 7",s:"كواليس · الساحل الشمالي"},{t:"جولة سينمائية لفيلا الساحل",s:"فيلا · 840 م² · الساحل"},{t:"كافيه جاباندي — من التصميم للافتتاح",s:"ريلز قصيرة · تشطيب مطعم"},{t:"تحوّل الشقة — نفس الزاوية",s:"قبل وبعد · الزمالك 220 م²"},{t:"صبّة الفجر — تيرازو ونحاس",s:"كواليس · حرفة"}];
+const PROJECTS_AR=[{t:"بيت الرخام",c:"فيلا · 620 م²",l:"التجمع"},{t:"بنتهاوس ديونز",c:"شقة · 340 م²",l:"الشيخ زايد"},{t:"فيلا الساحل الزجاجية",c:"فيلا · 840 م²",l:"الساحل الشمالي"},{t:"كافيه الأتيليه",c:"مطعم · 280 م²",l:"الزمالك"},{t:"مقر أونيكس الإداري",c:"تجاري · 1100 م²",l:"العاصمة الجديدة"},{t:"فيلا الفناء الهادئ",c:"فيلا · 510 م²",l:"بالم هيلز"}];
+const BR_AR=[{k:"الفرع الرئيسي",n:"القاهرة — فرع التجمع",a:"سوديك إيستاون، شارع التسعين، التجمع — الأحد–الخميس 10ص–8م"},{k:"فرع الغرب",n:"فرع الشيخ زايد",a:"أركان بلازا، البستان، الشيخ زايد — السبت–الخميس 10ص–8م"},{k:"أتيليه الصيف",n:"استوديو الساحل الشمالي",a:"مارينا مراسي، سيدي عبد الرحمن — يوميًا 11ص–9م (يونيو–سبتمبر)"}];
+const MQ_AR=["عمارة الفلل","تشطيب تسليم مفتاح","تفاصيل نيو كلاسيك","بساطة الجاباندي الدافئة","مطاعم وتجزئة","معيشة ذكية","رخام متطابق","تصميم الإضاءة المخفية"];
+const STEPS={en:["","Property Type","Unit Area","Interior Style","Project Scope"],ar:["","نوع العقار","مساحة الوحدة","الطراز الداخلي","نطاق المشروع"]};
+const money=n=>LANG==='ar'?(n>=1e6?"ج.م "+(n/1e6).toFixed(1)+"M":"ج.م "+Math.round(n/1000)+"K"):(n>=1e6?"EGP "+(n/1e6).toFixed(1)+"M":"EGP "+Math.round(n/1000)+"K");
+const unit=()=>LANG==='ar'?"م²":"sqm";
+
+/* ---------- MARQUEE ---------- */
+const mqItems=["Villa Architecture","Turnkey Fit-Out","Neo-Classic Detailing","Japandi Warm Minimalism","F&B & Retail","Smart Living","Book-Matched Marble","Cove Lighting Design"];
+function renderMQ(){const items=LANG==='ar'?MQ_AR:mqItems;document.getElementById('mq').innerHTML=(items.map(t=>`<span>${t}</span><i>◆</i>`).join("")).repeat(2);}
+renderMQ();
+
+/* ---------- REELS ---------- */
+const grid=document.getElementById('reelsGrid');
+function renderReels(f="all"){
+  curFilter=f;
+  grid.innerHTML=REELS.filter(r=>f==="all"||r.cat===f).map((r,i)=>{const a=REELS_AR[REELS.indexOf(r)];const t=LANG==='ar'?a.t:r.t,s=LANG==='ar'?a.s:r.s;return `
+   <div class="reel rv vis" data-i="${REELS.indexOf(r)}">
+     <img loading="lazy" src="${r.img}" alt="${t}">
+     <div class="reel-top"><span class="tag">${CATL[r.cat][LANG]}</span><span class="dur">${r.dur}</span></div>
+     <div class="play"><i class="fa-solid fa-play"></i></div>
+     <div class="reel-info"><h3>${t}</h3><p>${s}</p></div>
+   </div>`;}).join("");
+  grid.querySelectorAll('.reel').forEach(el=>el.onclick=()=>openVideo(+el.dataset.i));
+}
+renderReels();
+document.getElementById('reelFilters').onclick=e=>{
+  if(e.target.tagName!=="BUTTON")return;
+  document.querySelectorAll('#reelFilters .chip').forEach(c=>c.classList.remove('active'));
+  e.target.classList.add('active'); renderReels(e.target.dataset.f);
+};
+
+/* ---------- PORTFOLIO ---------- */
+function renderProjects(){
+document.getElementById('portGrid').innerHTML=PROJECTS.map((p,idx)=>{const a=PROJECTS_AR[idx];const t=LANG==='ar'?a.t:p.t,c=LANG==='ar'?a.c:p.c,l=LANG==='ar'?a.l:p.l;return `
+ <div class="pcard rv vis"><img loading="lazy" src="${p.img}" alt="${t}">
+  <span class="arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+  <div class="pcard-body"><div class="loc"><span>${c}</span><span>· ${l}</span></div><h3>${t}</h3><p>${LANG==='ar'?"تصميم + تسليم مفتاح — استوديو AURA":"Design + Turnkey by AURA Studio"}</p></div>
+ </div>`;}).join("");
+document.querySelectorAll('.pcard').forEach(c=>c.onclick=()=>document.getElementById('estimator').scrollIntoView({behavior:'smooth'}));
+}
+renderProjects();
+
+/* ---------- VIDEO MODAL ---------- */
+const vModal=document.getElementById('videoModal'),vEl=document.getElementById('modalVideo');
+function openVideo(i){const r=REELS[i],a=REELS_AR[i];vEl.poster=r.img;vEl.src=r.vid;document.getElementById('mvTitle').textContent=LANG==='ar'?a.t:r.t;document.getElementById('mvSub').textContent=(LANG==='ar'?a.s:r.s)+" · "+r.dur;vModal.classList.add('open');document.body.style.overflow='hidden';vEl.play().catch(()=>{});}
+function closeModals(){document.querySelectorAll('.modal.open').forEach(m=>m.classList.remove('open'));vEl.pause();document.body.style.overflow='';}
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=closeModals);
+document.addEventListener('keydown',e=>{if(e.key==="Escape")closeModals();});
+document.querySelector('[data-close-link]').onclick=closeModals;
+
+/* ---------- BEFORE/AFTER ---------- */
+const ba=document.getElementById('baSlider'),bh=document.getElementById('baHandle'),baf=document.getElementById('baAfter');
+let dragging=false;
+function setBA(x){const r=ba.getBoundingClientRect();let p=((x-r.left)/r.width)*100;p=Math.max(4,Math.min(96,p));ba.style.setProperty('--pos',p+'%');baf.style.setProperty('--pos',p+'%');bh.style.setProperty('--pos',p+'%');}
+ba.addEventListener('pointerdown',e=>{dragging=true;ba.setPointerCapture(e.pointerId);setBA(e.clientX);});
+ba.addEventListener('pointermove',e=>{if(dragging)setBA(e.clientX);});
+addEventListener('pointerup',()=>dragging=false);
+
+/* ---------- ESTIMATOR ---------- */
+const state={step:1,prop:"villa",area:350,rooms:"2",style:"modern",scope:"turnkey"};
+
+function bindOpts(id,key){document.getElementById(id).querySelectorAll('.opt').forEach(o=>o.onclick=()=>{document.getElementById(id).querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));o.classList.add('sel');state[key]=o.dataset.v;calc();});}
+bindOpts('propGrid','prop');bindOpts('styleGrid','style');bindOpts('scopeGrid','scope');
+document.querySelectorAll('.qroom').forEach(o=>o.onclick=()=>{document.querySelectorAll('.qroom').forEach(x=>x.classList.remove('sel'));o.classList.add('sel');state.rooms=o.dataset.v;});
+const area=document.getElementById('area');
+function paintRange(){const p=((area.value-100)/(1000-100))*100;area.style.setProperty('--fill',p+'%');}
+area.oninput=()=>{state.area=+area.value;document.getElementById('areaVal').textContent=area.value>=1000?"1,000+":area.value;paintRange();calc();};
+paintRange();
+function calc(){
+  const rate=BASE[state.prop]*STYLEM[state.style]*SCOPEM[state.scope];
+  const mid=state.area*rate;
+  document.getElementById('sProp').textContent=T(state.prop);
+  document.getElementById('sArea').textContent=(state.area>=1000?"1,000+":state.area)+" "+unit();
+  document.getElementById('sStyle').textContent=T(state.style);
+  document.getElementById('sScope').textContent=T(state.scope);
+  document.getElementById('sRate').textContent=LANG==='ar'?Math.round(rate).toLocaleString()+" ج.م":"EGP "+Math.round(rate).toLocaleString();
+  document.getElementById('sTotal').textContent=money(mid*.88)+" – "+money(mid*1.12);
+  document.getElementById('sNote').textContent=LANG==='ar'?`${T(state.scope)} · ${T(state.style)} · تباين مبدئي ±12%`:`${T(state.scope)} · ${T(state.style)} · ±12% concept variance`;
+}
+calc();
+function goStep(n){
+  state.step=Math.max(1,Math.min(4,n));
+  document.querySelectorAll('.est-step').forEach(s=>s.classList.toggle('active',+s.dataset.step===state.step));
+  document.querySelectorAll('#dots span').forEach((d,i)=>d.classList.toggle('on',i<state.step));
+  document.getElementById('stepLabel').textContent=LANG==='ar'?`الخطوة ${state.step} من 4 — ${STEPS.ar[state.step]}`:`Step ${state.step} of 4 — ${STEPS.en[state.step]}`;
+  document.getElementById('stepPct').textContent=(state.step*25)+"%";
+  document.getElementById('prevBtn').style.visibility=state.step===1?"hidden":"visible";
+  document.getElementById('nextBtn').innerHTML=state.step===4?(LANG==='ar'?`افتح التفاصيل الكاملة <i class="fa-solid fa-lock-open"></i>`:`Unlock Detailed Breakdown <i class="fa-solid fa-lock-open"></i>`):(LANG==='ar'?`أكمل <i class="fa-solid fa-arrow-right"></i>`:`Continue <i class="fa-solid fa-arrow-right"></i>`);
+}
+document.getElementById('nextBtn').onclick=()=>{state.step===4?openLead():goStep(state.step+1);};
+document.getElementById('prevBtn').onclick=()=>goStep(state.step-1);
+document.getElementById('unlockBtn').onclick=openLead;
+const leadModal=document.getElementById('leadModal');
+function estimateText(){
+  const rate=BASE[state.prop]*STYLEM[state.style]*SCOPEM[state.scope],mid=state.area*rate;
+  return {rate,lo:mid*.88,hi:mid*1.12};
+}
+function openLead(){
+  const {rate,lo,hi}=estimateText();
+  const per=LANG==='ar'?Math.round(rate).toLocaleString()+" ج.م/م²":"≈ EGP "+Math.round(rate).toLocaleString()+"/sqm";
+  document.getElementById('leadSummary').innerHTML=LANG==='ar'
+    ?`<b>اختياراتك:</b> ${T(state.prop)} · ${state.area} م² · ${T(state.style)} · ${T(state.scope)}<br><b>النطاق:</b> ${money(lo)} – ${money(hi)} <span style="opacity:.7">(${per})</span>`
+    :`<b>Your selection:</b> ${T(state.prop)} · ${state.area} sqm · ${T(state.style)} · ${T(state.scope)}<br><b>Range:</b> ${money(lo)} – ${money(hi)} <span style="opacity:.7">(${per})</span>`;
+  leadModal.classList.add('open');document.body.style.overflow='hidden';
+}
+document.getElementById('sendWa').onclick=()=>{
+  const name=document.getElementById('lName').value.trim(),phone=document.getElementById('lPhone').value.trim(),city=document.getElementById('lCity').value;
+  if(!name||!phone){alert(LANG==='ar'?"من فضلك أدخل الاسم ورقم الهاتف/واتساب.":"Please enter your name and phone/WhatsApp number.");return;}
+  const {rate,lo,hi}=estimateText();
+  const per=LANG==='ar'?Math.round(rate).toLocaleString()+" ج.م/م²":"≈ EGP "+Math.round(rate).toLocaleString()+"/sqm";
+  const msg=LANG==='ar'
+    ?`أهلاً AURA! أنا ${name} (${phone}) من ${city}.%0A%0Aمشروعي: ${T(state.prop)} | ${state.area} م² | الطراز: ${T(state.style)} | النطاق: ${T(state.scope)}%0Aالنطاق التقديري: ${money(lo)} – ${money(hi)} (${per})%0A%0Aمن فضلك أرسلوا التفاصيل الكاملة + احجزوا زيارة موقع. شكرًا!`
+    :`Hi AURA! I'm ${name} (${phone}) from ${city}.%0A%0AMy project: ${T(state.prop)} | ${state.area} sqm | Style: ${T(state.style)} | Scope: ${T(state.scope)}%0AEstimator range: ${money(lo)} – ${money(hi)} (${per})%0A%0APlease send me the detailed breakdown + book a site visit. Thank you!`;
+  window.open(`https://wa.me/201002345678?text=${msg}`,"_blank");
+};
+
+/* ---------- BRANCHES ---------- */
+function renderBranch(i){
+  curBranch=i;
+  const b=BRANCHES[i],a=BR_AR[i];
+  document.getElementById('bKicker').textContent=LANG==='ar'?a.k:b.k;
+  document.getElementById('bName').textContent=LANG==='ar'?a.n:b.n;
+  document.getElementById('bAddr').innerHTML=`<i class="fa-solid fa-location-dot" style="color:var(--gold)"></i> ${LANG==='ar'?a.a:b.a}`;
+  document.getElementById('bPhone').innerHTML=`<i class="fa-solid fa-phone" style="color:var(--gold)"></i> ${b.p}`;
+  document.getElementById('bWa').href=`https://wa.me/${b.wa}?text=${LANG==='ar'?encodeURIComponent("أهلاً AURA ("+a.n+")! أود حجز استشارة."):encodeURIComponent("Hi AURA ("+b.n+")! I'd like to book a consultation.")}`;
+  document.getElementById('bMap').src=b.map;
+}
+document.getElementById('branchTabs').onclick=e=>{
+  if(e.target.tagName!=="BUTTON")return;
+  document.querySelectorAll('#branchTabs button').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');
+  renderBranch(+e.target.dataset.b);
+};
+document.getElementById('contactForm').onsubmit=e=>{
+  e.preventDefault();
+  const n=document.getElementById('cName').value,p=document.getElementById('cPhone').value,i=document.getElementById('cInterest').value,m=document.getElementById('cMsg').value;
+  const txt=LANG==='ar'?`أهلاً AURA! أنا ${n} (${p}). مهتم بـ: ${i}. التفاصيل: ${m}`:`Hi AURA! I'm ${n} (${p}). Interested in: ${i}. Details: ${m}`;
+  window.open(`https://wa.me/201002345678?text=${encodeURIComponent(txt)}`,"_blank");
+};
+
+/* ---------- FX: header, reveal, counters, theme, menu ---------- */
+addEventListener('scroll',()=>document.getElementById('header').classList.toggle('scrolled',scrollY>30));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const n=+e.target.dataset.n,t0=performance.now();
+  (function tick(t){const p=Math.min(1,(t-t0)/1400),v=Math.round(n*(1-Math.pow(1-p,3)));e.target.textContent=v;if(p<1)requestAnimationFrame(tick);})(t0);
+}),{threshold:.5});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+document.getElementById('themeBtn').onclick=()=>{
+  const h=document.documentElement;h.dataset.theme=h.dataset.theme==="dark"?"light":"dark";
+};
+const mm=document.getElementById('mmenu');
+document.getElementById('burger').onclick=()=>mm.classList.add('open');
+document.getElementById('mclose').onclick=()=>mm.classList.remove('open');
+mm.querySelectorAll('a').forEach(a=>a.onclick=()=>mm.classList.remove('open'));
+
+/* ---------- BILINGUAL (EN/AR) ---------- */
+const I18N_AR={
+brand_sub:"للعمارة الداخلية",
+nav_projects:"المشاريع",nav_reels:"الفيديو",nav_est:"الحاسبة",nav_about:"الاستوديو",nav_testi:"آراء العملاء",nav_contact:"تواصل معنا",nav_cta:`احسب تكلفة مشروعك <i class="fa-solid fa-arrow-right"></i>`,
+m_projects:"المشاريع",m_reels:"الفيديو",m_est:"الحاسبة",m_about:"الاستوديو",m_testi:"آراء العملاء",m_contact:"تواصل معنا",m_cta:"احسب تكلفة مشروعك",
+hero_badge:"القاهرة · دبي · الساحل الشمالي — حجوزات 2026",
+hero_h1:`نصنع <em>مساحات فاخرة</em> خالدة.`,
+hero_sub:"عمارة داخلية حائزة على جوائز للفلل والمساكن الفاخرة والمساحات التجارية. من الفكرة حتى تسليم المفتاح — استوديو واحد، بلا تنازل.",
+hero_cta1:`<i class="fa-regular fa-images"></i> استكشف الأعمال`,hero_cta2:`<i class="fa-solid fa-calculator"></i> احسب الميزانية التقديرية`,
+hero_m1:"مشروع منجز",hero_m2:"عامًا من التميز",hero_m3:"تقييم العملاء",
+reels_k:"جاليري سينمائي",reels_h:`جولات <span class="gold serif" style="font-style:italic">الفيديو</span> والريلز`,reels_p:"جولات حقيقية وتقدّم المواقع وأنيميشن ثلاثي الأبعاد. اضغط على أي فيديو للمعاينة بملء الشاشة.",
+f_all:"كل الفيديوهات",f_villa:"جولات الفلل",f_reel:"ريلز قصيرة",f_before:"قبل وبعد",f_bts:"كواليس",
+port_k:"أعمال مختارة",port_h:`بورتفوليو <span class="gold serif" style="font-style:italic">المشاريع المميزة</span>`,port_p:"مرّر للاستكشاف. كل مشروع يُسلَّم تسليم مفتاح — تصميم وتنفيذ وفرش واستلام بدون ملاحظات.",
+ba_b:"قبل",ba_a:"بعد · تحوّل AURA",ba_k:"قبل / بعد",ba_h:`اسحب لتشاهد <span class="gold" style="font-style:italic">التحوّل.</span>`,
+ba_p:"فيلا بالم هيلز · صالة معيشة · 85 م² · تم التسليم في 112 يومًا. إعادة توزيع كاملة وتفاصيل نحاسية ورخام متطابق وإضاءة مخفية متعددة الطبقات.",
+ba_li1:"إعادة تخطيط إنشائي + ترقية كهروميكانيكية دون المساس بالواجهة",ba_li2:"رخام إيطالي وبلوط مدخّن ومعادن بلون الشامبين",ba_li3:"مشاهد إضاءة ذكية وضبط الراحة الصوتية",
+ba_cta:`احصل على تحوّل مماثل <i class="fa-solid fa-arrow-right"></i>`,
+est_k:"الحاسبة التفاعلية",est_h:`قدّر مشروعك في <span class="gold serif" style="font-style:italic">60 ثانية</span>`,est_p:"أجب عن 4 خطوات سريعة واحصل على نطاق ميزانية فوري. الاستفسارات الجادة تحصل على زيارة موقع ذات أولوية خلال 48 ساعة.",
+pv:"فيلا",pvs:"مستقلة / توين",av:"شقة",avs:"فلات / بنتهاوس",cv:"تجاري",cvs:"مكتب / عيادة",fv:"كافيه / مطعم",fvs:"مطعم / تجزئة",
+unit:"م²",area_hint:"سلايدر تفاعلي · 100 ← 1000+ م²",a_min:"100 م²",a_mid:"550 م²",a_max:"1000+ م²",rooms:"غرف",
+sv_mod:"ألترا مودرن",sv_mod_s:"نظيف · بسيط · ذكي",sv_cla:"كلاسيك أنيق",sv_cla_s:"خالد · مفصّل",sv_jap:"جاباندي",sv_jap_s:"دافئ · طبيعي · هادئ",sv_neo:"نيو كلاسيك",sv_neo_s:"باريسي · فاخر",
+sc_t:"تسليم مفتاح",sc_t_s:"تصميم + تنفيذ + فرش",sc_d:"تصميم فقط",sc_d_s:"لوحات + 3D + مقايسة",sc_s:"إشراف",sc_s_s:"إدارة الموقع",
+scope_note:`<i class="fa-solid fa-circle-info" style="color:var(--gold)"></i> التسليم المفتاح يشمل الخامات والعمالة والأخشاب والكهروميكانيكا والفرش وتنظيف الاستلام.`,
+back:`<i class="fa-solid fa-arrow-right"></i> رجوع`,
+sum_t:"التقدير المباشر",sum_sub:"يتحدّث لحظيًا مع اختياراتك",sum_prop:"نوع العقار",sum_area:"المساحة",sum_style:"الطراز",sum_scope:"النطاق",sum_rate:"سعر المتر",sum_range:"نطاق الميزانية التقديرية",
+unlock:`<i class="fa-solid fa-lock-open"></i> افتح التفاصيل الكاملة`,
+sum_spam:`<i class="fa-solid fa-shield-halved"></i> بدون إزعاج. اختياراتك تُرفق تلقائيًا في واتساب.`,
+about_k:"الاستوديو",about_h:`مشغل <span class="gold serif" style="font-style:italic">الفخامة الهادئة</span>`,about_p:"تأسس في القاهرة ويعمل في مصر والخليج. معماريون ومنسقو فرش ومهندسو مواقع تحت سقف واحد — شغوفون بالنِّسب والضوء وصدق الخامات.",
+st1:"مشروع منجز",st2:"متابع على السوشيال",st3:"جائزة",
+t1p:"«حوّلت AURA فيلتنا في التجمع إلى فندق بوتيك. الفرق قبل وبعد صدم حتى أصدقاءنا المعماريين.»",t1n:"سلمى المصري",t1r:"مالكة فيلا · التجمع",
+t2p:"«مقايسة شفافة وتقارير فيديو أسبوعية من الموقع، واستلام قبل الموعد بستة أيام. يستحق كل جنيه.»",t2n:"عمر خيري",t2r:"بنتهاوس · زايد ديونز",
+t3p:"«مطعمنا استرد رأس المال في 8 أشهر. التصميم نفسه أصبح دعايتنا.»",t3n:"نادين فوزي",t3r:"مؤسِّسة مطعم · الساحل",
+ct_k:"زورونا / تواصلوا",ct_h:`الاستوديوهات <span class="gold serif" style="font-style:italic">والاستشارات الخاصة</span>`,ct_p:"بدّل بين الفروع لعرض العنوان والمواعيد وخط واتساب المباشر. أو أرسل النموذج — نرد خلال يوم عمل واحد.",
+tab1:"التجمع",tab2:"الشيخ زايد",tab3:"الساحل الشمالي",
+b_wa:`<i class="fa-brands fa-whatsapp"></i> واتساب الفرع`,b_call:`<i class="fa-solid fa-phone"></i> اتصل الآن`,
+i1:"فيلا تسليم مفتاح",i2:"تصميم شقة",i3:"مكتب / تجاري",i4:"كافيه / مطعم",i5:"أخرى",
+submit:`اطلب معاودة الاتصال <i class="fa-solid fa-arrow-right"></i>`,
+vm_cta:`قدّر مشروعًا مشابهًا <i class="fa-solid fa-arrow-right"></i>`,
+l_k:"خطوة أخيرة",l_h:"افتح التفاصيل الكاملة",l_p:"اترك بياناتك — سنفتح واتساب بتقديرك الكامل مكتوبًا مسبقًا. فقط اضغط إرسال.",
+c1:"التجمع",c2:"الشيخ زايد / أكتوبر",c3:"الساحل الشمالي / إسكندرية",c4:"العاصمة الجديدة",c5:"دبي / الخليج",c6:"أخرى",
+send:`<i class="fa-brands fa-whatsapp" style="font-size:1.2rem"></i> إرسال عبر واتساب واستلام التفاصيل`,
+l_agree:"بالإرسال توافق على التواصل معك بخصوص مشروعك. بدون إزعاج أبدًا.",
+f1:`© 2026 <b class="serif" style="color:var(--gold)">AURA</b> للعمارة الداخلية · صُنع بالنِّسب والضوء.`,
+f2:`التجمع · الشيخ زايد · الساحل الشمالي · <a href="#estimator" style="color:var(--gold)">احسب مشروعك ←</a>`
+};
+const I18N_PH_AR={ph_name:"الاسم بالكامل",ph_phone:"الهاتف / واتساب",ph_msg:"حدثنا عن وحدتك (المساحة، المدينة، الموعد)...",ph_lname:"الاسم بالكامل *",ph_lphone:"الهاتف / واتساب (مثال 01xxxxxxxxx) *"};
+function setLang(l){
+  LANG=l;try{localStorage.setItem('aura-lang',l);}catch(e){}
+  document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';
+  document.getElementById('langBtn').textContent=l==='ar'?'EN':'ع';
+  document.getElementById('langBtn').title=l==='ar'?'Switch to English':'التبديل إلى العربية';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    if(el.dataset.en===undefined)el.dataset.en=el.innerHTML;
+    const k=el.dataset.i18n;
+    el.innerHTML=l==='ar'?(I18N_AR[k]!==undefined?I18N_AR[k]:el.dataset.en):el.dataset.en;
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
+    if(el.dataset.enPh===undefined)el.dataset.enPh=el.placeholder;
+    const k=el.dataset.i18nPh;
+    el.placeholder=l==='ar'?(I18N_PH_AR[k]!==undefined?I18N_PH_AR[k]:el.dataset.enPh):el.dataset.enPh;
+  });
+  renderMQ();renderReels(curFilter);renderProjects();renderBranch(curBranch);goStep(state.step);calc();
+}
+document.getElementById('langBtn').onclick=()=>setLang(LANG==='ar'?'en':'ar');
+try{setLang(localStorage.getItem('aura-lang')==='ar'?'ar':'en');}catch(e){setLang('en');}
+</script>
+</body>
+</html>
